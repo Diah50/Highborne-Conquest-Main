@@ -13,4 +13,4 @@ https://discord.gg/mbPujKc5TV
 # Credits
 People who worked on this project is credited here.
 
-* Diahborne(Henry Ha) - Lead Artist/Designer
+* Diahborne - Lead Artist/Designer
