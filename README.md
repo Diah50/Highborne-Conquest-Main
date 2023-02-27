@@ -13,4 +13,5 @@ https://discord.gg/mbPujKc5TV
 # Credits
 People who worked on this project is credited here.
 
-* Diahborne - Lead Artist/Designer
+* Diahborne#2948 - Lead Artist/Designer
+* buluquella#7429 - Programmer
