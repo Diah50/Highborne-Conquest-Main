@@ -2121,7 +2121,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1809309824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2624,33 +2624,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoomSpeed: 5
   maxZoom: 5
-  minZoom: 20
-  moveSpeedAtMinZoom: 15
-  moveSpeedAtMaxZoom: 40
+  minZoom: 15
+  moveSpeedAtMinZoom: 5
+  moveSpeedAtMaxZoom: 10
   moveSpeedCurve:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+    m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  movementSpeed: 10
+  edgeSize: 10
 --- !u!1 &2130373500
 GameObject:
   m_ObjectHideFlags: 0
