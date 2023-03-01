@@ -1,5 +1,5 @@
 # Highborne-Conquest-Main
-A Real-time Strategy game with elements of 4x and survival elements. This game is heavily inspired by Northgard and Warcraft.
+A Real-time Strategy game with elements of 4x and survival elements. May add RPG elements to the game in the future. This game is heavily inspired by Northgard, Warcraft, and Warlords Battlecry.
 
 Features:
 * Territory-Control - capture, colonize, and control territories until your control.
@@ -15,3 +15,4 @@ People who worked on this project is credited here.
 
 * Diahborne#2948 - Lead Artist/Designer
 * buluquella#7429 - Programmer
+* Barghest - Programmer
