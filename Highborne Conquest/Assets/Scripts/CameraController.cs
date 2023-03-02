@@ -9,12 +9,20 @@ public class CameraController : MonoBehaviour
     public float moveSpeedAtMaxZoom = 10f;
     public AnimationCurve moveSpeedCurve;
 
+    public float movementSpeed = 10.0f;
+    public float edgeSize = 10.0f;
+
+    private float screenWidth;
+    private float screenHeight;
+
     private Camera cam;
     private float targetZoom;
     private float moveSpeed;
 
     void Start()
     {
+        screenWidth = Screen.width;
+        screenHeight = Screen.height;
         cam = GetComponent<Camera>();
         targetZoom = cam.orthographicSize;
         moveSpeed = moveSpeedAtMinZoom;
@@ -39,12 +47,27 @@ public class CameraController : MonoBehaviour
         float curveEval = moveSpeedCurve.Evaluate(normalizedZoom);
         moveSpeed = Mathf.Lerp(moveSpeedAtMaxZoom, moveSpeedAtMinZoom, curveEval);
 
-        // Move the camera with the mouse
-        if (Input.GetMouseButton(1))
+        Vector3 position = transform.position;
+        Vector3 mousePosition = Input.mousePosition;
+
+        if (mousePosition.x > screenWidth - edgeSize)
         {
-            float mouseX = Input.GetAxis("Mouse X") * moveSpeed * Time.deltaTime*2;
-            float mouseY = Input.GetAxis("Mouse Y") * moveSpeed * Time.deltaTime*2;
-            transform.position += new Vector3(-mouseX, -mouseY, 0);
+            position.x += movementSpeed * Time.deltaTime;
         }
+        else if (mousePosition.x < edgeSize)
+        {
+            position.x -= movementSpeed * Time.deltaTime;
+        }
+
+        if (mousePosition.y > screenHeight - edgeSize)
+        {
+            position.y += movementSpeed * Time.deltaTime;
+        }
+        else if (mousePosition.y < edgeSize)
+        {
+            position.y -= movementSpeed * Time.deltaTime;
+        }
+
+        transform.position = position;
     }
 }
