@@ -19,6 +19,13 @@ public class CameraController : MonoBehaviour
     private float targetZoom;
     private float moveSpeed;
 
+    //Camera Bounds
+    [Range(0, 100)]
+    public float xBounds = 9.5f;
+    [Range(0, 100)]
+    public float yBounds = 9.5f;
+
+
     void Start()
     {
         screenWidth = Screen.width;
@@ -68,6 +75,23 @@ public class CameraController : MonoBehaviour
             position.y -= movementSpeed * Time.deltaTime;
         }
 
+        //Clamp Camera position
+        position = ClampCamera(position);
+ 
         transform.position = position;
+    }
+
+    private Vector3 ClampCamera(Vector3 position)
+    {
+
+        
+        Vector3 newPosition = Vector3.zero;
+
+        newPosition.x = Mathf.Clamp(position.x, -xBounds, xBounds); ;
+        newPosition.y = Mathf.Clamp(position.y, -yBounds, yBounds);
+        newPosition.z = position.z;
+
+
+        return newPosition;
     }
 }
