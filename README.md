@@ -15,5 +15,5 @@ People who worked on this project is credited here.
 
 * Diahborne#2948 - Lead Artist/Designer
 * buluquella#7429 - Programmer
-* Barghest - Programmer
+* Barghest#5588 - Programmer
 * Baljeet#8823 - Programmer
